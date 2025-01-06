@@ -1,0 +1,18 @@
+@import url(common.css);
+
+.index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    font-size: xx-large;
+}
+
+#top {
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    margin: 10px;
+}

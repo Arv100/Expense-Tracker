@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block title %} Dashboard {% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="static/css/dashboard.css">
+{% endblock %}
+
+{% block body %}
+
+<div id="top">
+    <a href="{{ url_for('logout') }}">
+        <button id="logout">
+            <span class="circle1"></span>
+            <span class="circle2"></span>
+            <span class="circle3"></span>
+            <span class="circle4"></span>
+            <span class="circle5"></span>
+            <span class="text">Logout</span>
+        </button>
+    </a>
+</div>
+<hr>
+<h1>Welcome {{ name }} !</h1>
+<div class="form-container">
+    <h1 class="form-title"> Transaction details</h1>
+    <form action="/add-item" method="post" class="registration-form">
+        <div id="Top">
+            <div>
+                <label for="transaction_date">Transaction date</label>
+                <input type="date" id="transaction_date" name="transaction_date" required value="{{ today }}">
+            </div>
+            <div>
+                <label for="transaction_type">Transaction type</label>
+                <div id="type">
+                    <div>
+                        <label for="income">
+                            <input type="radio" id="income" name="type" value="income" required>
+                            Income
+                        </label>
+                    </div>
+                    <div>
+                        <label for="expense">
+                            <input type="radio" id="expense" name="type" value="expense">
+                            Expense
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="input-group">
+            <label for="transactions">Transactions description</label>
+            <input type="text" id="transactions" name="transactions" placeholder="Enter your transactions description" required>
+        </div>
+        <div class="input-group">
+            <label for="Amount">Amount</label>
+            <input type="number" id="Amount" name="Amount" placeholder="Enter your Amount" required>
+        </div>
+        <div id="add">
+            <button id="add" type="submit" style="padding: 9px 50px;">
+                <span class="circle1"></span>
+                <span class="circle2"></span>
+                <span class="circle3"></span>
+                <span class="circle4"></span>
+                <span class="circle5"></span>
+                <span class="text">Add</span>
+            </button>
+        </div>
+    </form>
+</div>
+<div id="list_items">
+    <h1>List of Items</h1>
+    <table>
+        <thead>
+            <th>S.no</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Type</th>
+        </thead>
+        <tbody>
+            {% for key,val in rows.items() %}
+                <tr>
+                    <td>{{ key }}</td>
+                    <td>{{ val['transaction_desctiption'] }}</td>
+                    <td>{{ val['amount'] }}</td>
+                    <td>{{ val['type'] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

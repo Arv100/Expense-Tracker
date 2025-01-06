@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="static/css/index.css">
+{% endblock %}
+
+{% block body %}
+<div id="top">
+    <a href="{{ url_for('login') }}">
+        <button id="login">
+            <span class="circle1"></span>
+            <span class="circle2"></span>
+            <span class="circle3"></span>
+            <span class="circle4"></span>
+            <span class="circle5"></span>
+            <span class="text">Login</span>
+        </button>
+    </a>
+    <a href="{{ url_for('sign_up') }}">
+        <button id="sign_up">
+            <span class="circle1"></span>
+            <span class="circle2"></span>
+            <span class="circle3"></span>
+            <span class="circle4"></span>
+            <span class="circle5"></span>
+            <span class="text">Sign up</span>
+        </button>
+    </a>
+</div>
+<hr>
+<div class="index">
+    <h1>Expense tracker</h1>
+</div>
+
+
+{% endblock %}

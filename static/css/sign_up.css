@@ -1,0 +1,85 @@
+@import url(common.css);
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--input-bg-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.form-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.registration-form {
+    width: 100%;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: var(--primary-color);
+}
+
+button {
+    width: 80%;
+}
+
+button span:not(:nth-child(6)) {
+    left: 50%;
+    top: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+button span:nth-child(1) {
+    transform: translate(-3.3em, -10em);
+}
+
+button span:nth-child(5) {
+    transform: translate(10.5em, -3.8em);
+}
+
+button span:nth-child(4) {
+    transform: translate(3.5em, 2.4em);
+}
+
+button span:nth-child(2) {
+    transform: translate(-6em, 2.3em);
+}

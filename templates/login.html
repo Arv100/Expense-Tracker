@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %} Login {% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="static/css/sign_up.css">
+{% endblock %}
+
+{% block body %}
+<div class="form-container">
+    <h1 class="form-title">Log in</h1>
+    <form action="{{ url_for('auth_login') }}" method="post" class="registration-form">
+        <div class="input-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <div>
+            <button id="login" type="submit" class="button3">
+                <span class="circle1"></span>
+                <span class="circle2"></span>
+                <span class="circle3"></span>
+                <span class="circle4"></span>
+                <span class="circle5"></span>
+                <span class="text">Log in</span>
+            </button>
+        </div>
+    </form>
+    <p>Don't have an account? <a href="{{ url_for('sign_up') }}">Register</a></p>
+</div>
+
+{% endblock %}

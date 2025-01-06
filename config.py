@@ -1,0 +1,1 @@
+URI = "mongodb+srv://arvindarv01:jskYrGIW1PqZpTZK@expense-tracker-cluster.ukdsc.mongodb.net/"

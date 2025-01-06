@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %} Sign up {% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="static/css/sign_up.css">
+{% endblock %}
+
+{% block body %}
+<div class="form-container">
+	<h1 class="form-title">Register</h1>
+	<form action="{{ url_for('auth_register') }}" method="post" class="registration-form">
+		<div class="input-group">
+			<label for="username">Username</label>
+			<input type="text" id="username" name="username" placeholder="Enter your username" required>
+		</div>
+		<div class="input-group">
+			<label for="email">Email</label>
+			<input type="email" id="email" name="email" placeholder="Enter your email" required>
+		</div>
+		<div class="input-group">
+			<label for="password">Password</label>
+			<input type="password" id="password" name="password" placeholder="Enter your password" required>
+		</div>
+		<div class="input-group">
+			<label for="confirm-password">Confirm Password</label>
+			<input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password"
+				required>
+		</div>
+		<div>
+            <button id="sign_up" type="submit" class="button3">
+                <span class="circle1"></span>
+                <span class="circle2"></span>
+                <span class="circle3"></span>
+                <span class="circle4"></span>
+                <span class="circle5"></span>
+                <span class="text">Sign up</span>
+            </button>
+        </div>
+	</form>
+	<p>Already have an account? <a href="{{ url_for('login') }}">Log in</a></p>
+</div>
+<script>
+    const passwordField = document.querySelector('input[name="password"]');
+    const confirmPasswordField = document.querySelector('input[name="confirm-password"]');
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', (e) => {
+        if (passwordField.value !== confirmPasswordField.value) {
+            alert('Passwords do not match!');
+            e.preventDefault(); // Prevent form submission
+        }
+    });
+</script>
+{% endblock %}

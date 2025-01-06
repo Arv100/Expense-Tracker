@@ -1,0 +1,92 @@
+@import url(index.css);
+
+.form-container {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+.form-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.registration-form {
+    width: 100%;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-group input {
+    width: 70%;
+    padding: 10px;
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+    border: 0.5px solid var(--accent-color);
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#type {
+    display: flex;
+}
+
+#Top {
+    display: flex;
+}
+
+#Top>div {
+    /* background-color: red; */
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+button span:not(:nth-child(6)) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 35px;
+    width: 35px;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+th, td {
+    padding: 12px;
+    border: 1px solid var(--accent-color);
+}
+th {
+    background-color: var(--input-bg-color);
+}
+
+#list_items {
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 350px;  /* Set the height of the div */
+    overflow-y: auto;  /* Enable vertical scrolling */
+    background-color: var(--input-bg-color);
+    padding-left: 10px;
+        
+}
+
+div > h1 {
+    text-decoration: underline;
+}

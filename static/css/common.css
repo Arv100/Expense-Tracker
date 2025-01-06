@@ -1,0 +1,106 @@
+:root {
+  --primary-color: #FF204E;
+  --secondary-color: #A0153E;
+  --accent-color: #5D0E41;
+  --background-color: #00224D;
+  --input-bg-color: #1A1A2E;
+  --text-color: #FFFFFF;
+}
+
+
+* {
+  font-family: 'Poppins';
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--background-color);
+  color: white;
+}
+
+
+h1,
+h2 {
+  color: var(--primary-color);
+}
+
+hr {
+  border: none; /* Remove default border style */
+  border-top: 1px solid var(--accent-color); /* Add a thin border */
+  height: 1px; /* Set the height */
+  background-color: var(--accent-color); /* Fallback for older browsers */
+  /* margin: 20px 0; Optional: Adjust spacing around the hr */
+}
+
+a {
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 500;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* button {
+
+    color: white;
+    background-color: #171717;
+    padding: 1em 2em;
+    border: none;
+    border-radius: .6rem;
+
+} */
+
+button span:not(:nth-child(6)) {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 30px;
+  width: 30px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  transition: .6s ease;
+}
+
+button span:nth-child(6) {
+  position: relative;
+}
+
+button span:nth-child(1) {
+  transform: translate(-3.3em, -4em);
+}
+
+button span:nth-child(2) {
+  transform: translate(-6em, 1.3em);
+}
+
+button span:nth-child(3) {
+  transform: translate(-.2em, 1.8em);
+}
+
+button span:nth-child(4) {
+  transform: translate(3.5em, 1.4em);
+}
+
+button span:nth-child(5) {
+  transform: translate(3.5em, -3.8em);
+}
+
+button:hover span:not(:nth-child(6)) {
+  transform: translate(-50%, -50%) scale(4);
+  transition: 1.5s ease;
+}
